@@ -49,14 +49,9 @@ const setColorPalette = (base: string) => {
 };
 
 const registerCommands = () => {
-    vscode.commands.registerCommand('lorikeet.randomizeColor', () => {
+    vscode.commands.registerCommand('lorikeet.surpriseMe', () => {
         const newColor = getRandomColor().toHexString();
-
-        vscode.window.showInformationMessage(newColor);
 
         setColorPalette(newColor);
     });
 };
-
-// this method is called when your extension is deactivated
-export function deactivate() {}

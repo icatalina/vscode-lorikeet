@@ -23,8 +23,8 @@
     "contributes": {
         "commands": [
             {
-                "command": "lorikeet.randomizeColor",
-                "title": "Randomize Color"
+                "command": "lorikeet.surpriseMe",
+                "title": "Lorikeet: Surprise me"
             }
         ],
         "configuration": {

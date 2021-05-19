@@ -3,12 +3,13 @@
 Subtly change the color of your Visual Studio Code workspace. Ideal when you
 have multiple VS Code instances and you want to quickly identify your editor.
 
+## Extension Commands
+
+This extensions expose the following commands:
+
+Surprise me: Changes the color of the current ui to a new random color
+
 ## Extension Settings
-
-Include if your extension adds any VS Code settings through the
-`contributes.configuration` extension point.
-
-For example:
 
 This extension contributes the following settings:
 
