@@ -42,11 +42,10 @@
         "compile": "webpack",
         "watch": "webpack --watch",
         "package": "webpack --mode production --devtool hidden-source-map",
-        "test-compile": "tsc -p ./",
-        "test-watch": "tsc -watch -p ./",
-        "pretest": "npm run test-compile && npm run lint",
+        "test-watch": "jest --watch",
+        "pretest": "npm run lint && tsc --noEmit",
         "lint": "eslint src --ext ts",
-        "test": "node ./out/test/runTest.js"
+        "test": "jest"
     },
     "devDependencies": {
         "@types/glob": "^7.1.3",

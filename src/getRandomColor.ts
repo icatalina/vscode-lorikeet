@@ -14,4 +14,4 @@ const getColor = (color = random()): Instance => {
 
 export const getRandomColor = (): string => {
     return getColor().toHexString();
-}
+};
