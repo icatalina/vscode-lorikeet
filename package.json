@@ -2,7 +2,7 @@
     "name": "lorikeet",
     "displayName": "lorikeet",
     "description": "Sets an accent color for your windows",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "publisher": "icatalina",
     "repository": {
         "type": "git",
