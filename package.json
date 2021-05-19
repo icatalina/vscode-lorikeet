@@ -25,6 +25,22 @@
             {
                 "command": "lorikeet.surpriseMe",
                 "title": "Lorikeet: Surprise me"
+            },
+            {
+                "command": "lorikeet.darken",
+                "title": "Lorikeet: Darken current color"
+            },
+            {
+                "command": "lorikeet.lighten",
+                "title": "Lorikeet: Lighten current color"
+            },
+            {
+                "command": "lorikeet.saturate",
+                "title": "Lorikeet: Saturate current color"
+            },
+            {
+                "command": "lorikeet.desaturate",
+                "title": "Lorikeet: Desaturate current color"
             }
         ],
         "configuration": {

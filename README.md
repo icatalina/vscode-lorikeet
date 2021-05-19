@@ -7,7 +7,12 @@ have multiple VS Code instances and you want to quickly identify your editor.
 
 This extensions expose the following commands:
 
-Surprise me: Changes the color of the current ui to a new random color
+- Lorikeet: Surprise me
+    > Changes the color of the current ui to a new random color
+- Lorikeet: Darken current color
+- Lorikeet: Lighten current color
+- Lorikeet: Saturate current color
+- Lorikeet: Desaturate current color
 
 ## Extension Settings
 

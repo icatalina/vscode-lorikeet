@@ -1,5 +1,6 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
+import tinycolor from 'tinycolor2';
 import * as vscode from 'vscode';
 import { generateColorPalette } from './generateColorPalette';
 import { generateVSCodePalette } from './generateVSCodePalette';
@@ -44,6 +45,34 @@ const registerCommands = () => {
         const newColor = getRandomColor();
 
         setColorPalette(newColor);
+    });
+
+    vscode.commands.registerCommand('lorikeet.darken', () => {
+        const color = getCurrentColor();
+        const newColor = tinycolor(color).darken();
+
+        setColorPalette(newColor.toHexString());
+    });
+
+    vscode.commands.registerCommand('lorikeet.lighten', () => {
+        const color = getCurrentColor();
+        const newColor = tinycolor(color).lighten();
+
+        setColorPalette(newColor.toHexString());
+    });
+
+    vscode.commands.registerCommand('lorikeet.saturate', () => {
+        const color = getCurrentColor();
+        const newColor = tinycolor(color).saturate();
+
+        setColorPalette(newColor.toHexString());
+    });
+
+    vscode.commands.registerCommand('lorikeet.desaturate', () => {
+        const color = getCurrentColor();
+        const newColor = tinycolor(color).desaturate();
+
+        setColorPalette(newColor.toHexString());
     });
 };
 
