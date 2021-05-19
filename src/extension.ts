@@ -10,16 +10,7 @@ import { getRandomColor } from './getRandomColor';
 export function activate() {
     registerCommands();
 
-    const config = vscode.workspace.getConfiguration();
-    const configuredColor = config.inspect<string>('lorikeet.color');
-
-    if (!configuredColor) {
-        return;
-    }
-
-    setColorPalette(
-        configuredColor.workspaceValue ?? getRandomColor().toHexString()
-    );
+    setColorPalette(getCurrentColor() ?? getRandomColor());
 }
 
 const setColorPalette = (base: string) => {
@@ -50,8 +41,15 @@ const setColorPalette = (base: string) => {
 
 const registerCommands = () => {
     vscode.commands.registerCommand('lorikeet.surpriseMe', () => {
-        const newColor = getRandomColor().toHexString();
+        const newColor = getRandomColor();
 
         setColorPalette(newColor);
     });
+};
+
+const getCurrentColor = (): string | undefined => {
+    const config = vscode.workspace.getConfiguration();
+    const configuredColor = config.inspect<string>('lorikeet.color');
+
+    return configuredColor?.workspaceValue;
 };

@@ -1,6 +1,6 @@
-import { random, Instance, mostReadable, readability } from 'tinycolor2';
+import { Instance, mostReadable, random, readability } from 'tinycolor2';
 
-export const getRandomColor = (color = random()): Instance => {
+const getColor = (color = random()): Instance => {
     const contrast = mostReadable(color, ['#fff', '#000']);
 
     if (readability(contrast, color) > 9) {
@@ -9,5 +9,9 @@ export const getRandomColor = (color = random()): Instance => {
 
     const newColor = color.isDark() ? color.darken(5) : color.lighten(5);
 
-    return getRandomColor(newColor);
+    return getColor(newColor);
 };
+
+export const getRandomColor = (): string => {
+    return getColor().toHexString();
+}

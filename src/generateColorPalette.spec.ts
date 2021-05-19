@@ -22,7 +22,7 @@ expect.extend({
 });
 
 it('generates from a dark color', () => {
-    const test = Array.from(Array(400), () => getRandomColor().toHexString());
+    const test = Array.from(Array(400), () => getRandomColor());
 
     const result = test.map(color => {
         const processed = generateColorPalette(color);
